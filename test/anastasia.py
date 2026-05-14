@@ -7,4 +7,4 @@ def test_add_edit():
     id = response.json()["id"]
     body = {"title": "generated-1"}
     response = requests.patch(f"https://todo-app-sky.herokuapp.com/{id}", json=body)
-    assert response['id'] == id
+    assert response.json()["id"] == id
