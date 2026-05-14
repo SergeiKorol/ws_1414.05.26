@@ -2,6 +2,9 @@ import requests
 
 
 def test_completed_true():
+    '''Тест Создать задачу, Проставить отметку о выполнении
+    и проверить что completed == True'''
+
     body = {"title": "generated", "completed": False}
     response = requests.post("https://todo-app-sky.herokuapp.com/", json=body)
     id = response.json()["id"]
