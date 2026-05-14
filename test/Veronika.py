@@ -12,6 +12,7 @@ create_response = requests.post(
     "https://todo-app-sky.herokuapp.com/",
     json=create_data
 )
+"""Поменяли что-то"""
 
 assert create_response.status_code == 200, "Ошибка создания задачи"
 task_id = create_response.json().get('id')
